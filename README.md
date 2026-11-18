@@ -1,18 +1,30 @@
-# Projeto de Abstração em Java
+# Exercício de abstração e modelagem em Java
 
-Projeto prático desenvolvido para treinar conceitos de Programação Orientada a Objetos (POO), feito em Java. O foco principal foi aplicar a Abstração e separar a estrutura do código usando o padrão MVC (Model e View).
+Aplicação de console para praticar modelagem de classes e objetos com exemplos de carros e profissões. O projeto organiza os exemplos nos pacotes `model` e `view` e usa menus interativos para explorar os comportamentos.
 
-## O que o código faz?
-O programa roda direto no terminal e é dividido em dois menus interativos principais:
+## O que o programa demonstra
 
-* **Menu de Carros:** Permite cadastrar veículos numa lista (`ArrayList`), além de interagir com o objeto ligando, desligando, acelerando e buzinando. Tem validações simples para não deixar ligar um carro que já está ligado.
-* **Menu de Profissões:** Uma lista com 20 profissões diferentes (Professor, Médico, Engenheiro, etc.). Dá para escolher uma profissão no menu e o programa vai instanciar os objetos e executar os métodos específicos de cada uma (como `ensinar()` ou `projetar()`).
+- Cadastro e listagem de carros em uma `ArrayList`.
+- Seleção de um carro para ligar, desligar, acelerar, frear ou buzinar.
+- Exemplos de objetos de diferentes profissões, cada um com atributos e ações próprios.
+- Leitura de opções pelo console com `Scanner`.
 
-## Como foi feito
-* **Linguagem:** Java puro
-* **Conceitos:** Abstração, Classes, Construtores e Encapsulamento.
-* **Organização:** Arquivos divididos em pacotes (`model` para a estrutura dos objetos e `view` para os menus e o `main`).
-* Entrada de dados feita com `Scanner`.
+## Tecnologias e conceitos
 
-## Como testar
-É só baixar o código, abrir na sua IDE favorita, procurar o arquivo `Main.java` (dentro da pasta `view`) e rodar. Tudo funciona direto pelo console.
+- Java
+- Classes, objetos, construtores e métodos
+- Listas com `ArrayList`
+- Separação simples entre modelos e interface de console
+
+## Como executar
+
+É necessário ter um JDK instalado. No PowerShell, execute na pasta do repositório:
+
+```powershell
+New-Item -ItemType Directory -Force out | Out-Null
+$sources = Get-ChildItem -Filter *.java | ForEach-Object { $_.FullName }
+javac -d out $sources
+java -cp out br.edu.fatecpg.abstracao.view.Main
+```
+
+O projeto é um exercício de estudo e não possui persistência de dados.
